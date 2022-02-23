@@ -13,16 +13,19 @@
     </v-app-bar>
 
     <v-main>
+      <score-sheet/>
     </v-main>
   </v-app>
 </template>
 
 <script>
+import ScoreSheet from './components/ScoreSheet.vue';
 
 export default {
   name: 'App',
 
   components: {
+    ScoreSheet
   },
 
   data: () => ({

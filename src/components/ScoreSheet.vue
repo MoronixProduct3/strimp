@@ -6,6 +6,7 @@
 
         <v-autocomplete
             outlined
+            clearable
             label="Mission"
             :items="missions"
             item-text="name"/>
@@ -37,13 +38,82 @@
             </v-col>
         </v-row>
 
+        <h2>Tour</h2>
+        <v-chip-group
+            mandatory
+            active-class="primary--text"
+        >
+            <v-chip
+                v-for="j in 2"
+                :key="j"
+                :value="j-1"
+            >
+                Premier tour joueur {{j}}
+            </v-chip>
+        </v-chip-group>
+
+        <v-chip-group
+            mandatory
+            active-class="primary--text"
+        >
+            <v-chip
+                v-for="t in 5"
+                :key="t"
+                :value="t-1"
+            >
+                Tour {{t}}
+            </v-chip>
+        </v-chip-group>
+
+        <v-chip-group
+            mandatory
+            active-class="primary--text"
+        >
+            <v-chip
+                v-for="j in 2"
+                :key="j"
+                :value="j-1"
+            >
+                Joueur {{j}}
+            </v-chip>
+        </v-chip-group>
+
+
+        <h2>Primaires</h2>
+        <v-row>
+            <v-col
+                v-for="n in 2"
+                :key="n"
+            >
+                Joueur {{n}}
+
+                <primaries/>
+            </v-col>
+        </v-row>
+
+        <h2>Secondaries</h2>
+        <v-row>
+            <v-col
+                v-for="n in 2"
+                :key="n"
+            >
+                Joueur {{n}}
+                <secondaries/>
+            </v-col>
+        </v-row>
+
     </v-container>
 </template>
 
 <script>
-export default {
-    
+import Primaries from './Primaries.vue';
+import Secondaries from './Secondaries.vue';
 
+export default {
+    components: {
+        Primaries,
+        Secondaries
+    },
 
     data() {
         return {

@@ -32,7 +32,7 @@
 
 <script>
 export default {
-    props: ['turn', 'key'],
+    props: ['turn'],
 
     data() {
         return {

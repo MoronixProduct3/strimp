@@ -19,10 +19,10 @@
 </template>
 
 <script>
-import ScoreSheet from './components/ScoreSheet.vue';
+import ScoreSheet from '@/components/ScoreSheet.vue';
 
 export default {
-  name: 'App',
+  name: 'Main',
 
   components: {
     ScoreSheet

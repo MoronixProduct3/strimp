@@ -1,26 +1,29 @@
 <template>
-  <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-      <v-toolbar-title>Banner</v-toolbar-title>
-
-      <v-spacer></v-spacer>
-
-
-    </v-app-bar>
-
-    <v-main>
-        test
-    </v-main>
-  </v-app>
+    <v-app>
+        <v-main>
+                <v-container>
+                    <v-row>
+                        <v-col>
+                            <player-banner/>
+                        </v-col>
+                        <v-col cols="2">
+                            <turn-banner/>
+                        </v-col>
+                        <v-col>
+                            <player-banner/>
+                        </v-col>
+                    </v-row>
+                </v-container>
+        </v-main>
+    </v-app>
 </template>
 
 <script>
+import PlayerBanner from '../components/PlayerBanner.vue';
+import TurnBanner from '../components/TurnBanner.vue';
 
 export default {
+  components: { PlayerBanner, TurnBanner },
   name: 'Banner',
 
 

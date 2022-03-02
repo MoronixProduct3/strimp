@@ -15,6 +15,11 @@ npm run serve
 npm run build
 ```
 
+### Start production server
+```
+node backend.js
+```
+
 ### Lints and fixes files
 ```
 npm run lint

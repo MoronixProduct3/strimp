@@ -1,7 +1,7 @@
 const express = require("express")
 const StrimpData = require("./strimp_data")
 
-const WEB_PORT = 8000;
+const WEB_PORT = 80;
 const WS_PORT = 9000;
 
 

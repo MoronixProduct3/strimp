@@ -4,13 +4,17 @@
                 <v-container>
                     <v-row>
                         <v-col>
-                            <player-banner/>
+                            <player-banner
+                                color="indigo darken-3"
+                            />
                         </v-col>
                         <v-col cols="2">
                             <turn-banner/>
                         </v-col>
                         <v-col>
-                            <player-banner/>
+                            <player-banner
+                                color="red darken-4"
+                            />
                         </v-col>
                     </v-row>
                 </v-container>

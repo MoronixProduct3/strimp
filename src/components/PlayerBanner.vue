@@ -1,5 +1,5 @@
 <template>
-    <v-card color="indigo darken-3">
+    <v-card :color="color">
         <v-card-text class="white--text">
             <v-row class="mx-0">
                 <div>
@@ -21,7 +21,7 @@
 
 <script>
 export default {
-
+    props: ["color"]
 }
 </script>
 

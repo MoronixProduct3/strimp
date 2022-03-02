@@ -107,7 +107,9 @@
             >
                 Joueur {{n}}
 
-                <primaries/>
+                <primaries
+                    v-model="game.player[n-1].primaries"
+                />
             </v-col>
         </v-row>
 
@@ -118,7 +120,9 @@
                 :key="n"
             >
                 Joueur {{n}}
-                <secondaries/>
+                <secondaries
+                    v-model="game.player[n-1].secondaries"
+                />
             </v-col>
         </v-row>
 
@@ -159,6 +163,20 @@ export default {
                             ],
                             mission: null
                         },
+                        secondaries: [
+                            {
+                                name:"",
+                                points: null,
+                            },
+                            {
+                                name:"",
+                                points: null,
+                            },
+                            {
+                                name:"",
+                                points: null,
+                            },
+                        ]
                     },
                     {
                         name:"",
@@ -173,6 +191,20 @@ export default {
                             ],
                             mission: null
                         },
+                        secondaries: [
+                            {
+                                name:"",
+                                points: null,
+                            },
+                            {
+                                name:"",
+                                points: null,
+                            },
+                            {
+                                name:"",
+                                points: null,
+                            },
+                        ]
                     },
                 ]
             },

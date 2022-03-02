@@ -9,6 +9,7 @@
             >
                 <v-text-field
                     label="Nom"
+                    v-model="value[n-1].name"
                 />
             </v-col>
             <v-col
@@ -18,6 +19,7 @@
                     outlined
                     type="number"
                     suffix="VP"
+                    v-model.number="value[n-1].points"
                 />
             </v-col>
         </v-row>
@@ -26,7 +28,7 @@
 
 <script>
 export default {
-
+    props:['value']
 }
 </script>
 

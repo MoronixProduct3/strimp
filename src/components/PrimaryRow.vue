@@ -5,19 +5,19 @@
         </v-col>
         <v-col>
             <v-checkbox
-                v-model="cond1"
+                v-model="value[0]"
                 label="Hold 1+"
                 />
         </v-col>
         <v-col>
             <v-checkbox
-                v-model="cond2"
+                v-model="value[1]"
                 label="Hold 2+"
                 />
         </v-col>
         <v-col>
             <v-checkbox
-                v-model="cond3"
+                v-model="value[2]"
                 label="Hold More"
                 />
         </v-col>
@@ -32,18 +32,11 @@
 
 <script>
 export default {
-    props: ['turn'],
+    props: ['turn', 'value'],
 
-    data() {
-        return {
-            cond1:false,
-            cond2:false,
-            cond3:false,
-        }
-    },
     computed: {
         score: function() {
-            return 4*(this.cond1+this.cond2+this.cond3)
+            return 4* this.value.reduce((sum,item)=> sum + item)
         }
     }
 }

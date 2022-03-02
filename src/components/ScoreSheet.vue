@@ -216,10 +216,26 @@ export default {
 
     watch: {
         game: {
-            handler() {
-                // Push data
+            handler(upData) {
+                console.log("pushing update to server")
+                this.connection.send(JSON.stringify(upData))
             },
             deep:true
+        }
+    },
+
+    created: function() {
+        const self = this
+        console.log("Starting connection to WebSocket Server")
+        this.connection = new WebSocket(`ws://${location.hostname}:9000`)
+
+        this.connection.onmessage = function(event) {
+            console.log("receiving incoming data");
+            self.game = JSON.parse(event.data)
+        }
+
+        this.connection.onopen = function() {
+            console.log("Successfully connected to the websocket server...")
         }
     }
 }

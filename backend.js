@@ -1,14 +1,14 @@
 const express = require("express")
 const StrimpData = require("./strimp_data")
 
-const PORT = 8000;
+const WEB_PORT = 8000;
+const WS_PORT = 9000;
 
+
+// Start Data transport
+const strimpData = new StrimpData(WS_PORT)
 
 // Start web server
 const app = express();
 app.use(express.static('dist'))
-
-const server = app.listen(PORT, ()=>{console.log(`listening on ${PORT}`)})
-
-// Start Data transport
-const strimpData = new StrimpData(server)
+app.listen(WEB_PORT, () => { console.log(`listening on ${WEB_PORT}`)})

@@ -119,3 +119,12 @@ export default {
     }
 };
 </script>
+
+<style>
+    #app {
+        background-color: #00000000;
+    }
+    html {
+        overflow: hidden
+    }
+</style>

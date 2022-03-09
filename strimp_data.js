@@ -19,13 +19,14 @@ class StrimpData {
             }
             
             s.on('message', (msg) => {
-                if (this.data === msg.toString())
+                const msgString = msg.toString()
+                if (this.data === msgString)
                     return
-                this.data = msg.toString()
+                this.data = msgString
                 console.log("data updated")
                 this.sockets.forEach(si => {
                     if (si !== s)
-                        si.send(msg)
+                        si.send(msgString)
                 })
             })
 

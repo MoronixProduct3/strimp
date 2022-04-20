@@ -3,12 +3,12 @@
         <v-main>
             <v-container fluid>
                 <v-row>
-                    <v-col cols=8>
+                    <v-col cols=9>
                         <div class="holder">
                             <v-responsive :aspect-ratio="60/44" class="camslot"/>
                         </div>
                     </v-col>
-                    <v-col cols=3>
+                    <v-col>
                         <div class="holder">
                             <v-responsive :aspect-ratio="60/44" class="camslot"/>
                         </div>
@@ -18,15 +18,19 @@
                                 color="indigo darken-3"
                                 v-model="game.player[0]"
                             />
+                            <player-points
+                                color="indigo darken-2"
+                                v-model="game.player[0]"
+                            />
 
                             <player-banner
                                 color="red darken-4"
                                 v-model="game.player[1]"
                             />
-                        </div>
-
-                        <div class="holder">
-                            <v-responsive :aspect-ratio="60/44" class="camslot"/>
+                            <player-points
+                                color="red darken-3"
+                                v-model="game.player[1]"
+                            />
                         </div>
                     </v-col>
                 </v-row>
@@ -38,11 +42,11 @@
 <script>
 import GAME_DATA from '../data/game';
 import PlayerBanner from '../components/PlayerBanner.vue';
-
+import PlayerPoints from '../components/PlayerPoints.vue';
 
 export default {
   name: 'Panel',
-  components: { PlayerBanner },
+  components: { PlayerBanner, PlayerPoints },
 
   data: () => ({
     game: GAME_DATA,

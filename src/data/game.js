@@ -17,7 +17,7 @@ module.exports = {
                     [0,0,0],
                     [0,0,0],
                 ],
-                mission: null
+                mission: 0
             },
             secondaries: [
                 {
@@ -45,7 +45,7 @@ module.exports = {
                     [0,0,0],
                     [0,0,0],
                 ],
-                mission: null
+                mission: 0
             },
             secondaries: [
                 {

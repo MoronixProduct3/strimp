@@ -14,6 +14,9 @@
                         </div>
 
                         <div class="holder">
+                            <turn-banner
+                                v-model="game"
+                            />
                             <player-banner
                                 color="indigo darken-3"
                                 v-model="game.player[0]"
@@ -43,10 +46,11 @@
 import GAME_DATA from '../data/game';
 import PlayerBanner from '../components/PlayerBanner.vue';
 import PlayerPoints from '../components/PlayerPoints.vue';
+import TurnBanner from '../components/TurnBanner.vue';
 
 export default {
   name: 'Panel',
-  components: { PlayerBanner, PlayerPoints },
+  components: { PlayerBanner, PlayerPoints, TurnBanner },
 
   data: () => ({
     game: GAME_DATA,

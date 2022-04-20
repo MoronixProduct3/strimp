@@ -133,6 +133,7 @@
 import Primaries from './Primaries.vue';
 import Secondaries from './Secondaries.vue';
 import missions from '../data/missions'
+import GAME_DATA from '../data/game'
 
 export default {
     components: {
@@ -142,72 +143,7 @@ export default {
 
     data() {
         return {
-            game:{
-                name: "",
-                mission: null,
-                map: null,
-                firstTurnPlayer: 1, // 1 or 2
-                turn: 1,            // 1 through 5
-                playerTurn: 1,      // 1 or 2
-                player: [
-                    {
-                        name:"",
-                        faction:"",
-                        cp:null,
-                        primaries:{
-                            objectives: [
-                                [0,0,0],
-                                [0,0,0],
-                                [0,0,0],
-                                [0,0,0],
-                            ],
-                            mission: null
-                        },
-                        secondaries: [
-                            {
-                                name:"",
-                                points: null,
-                            },
-                            {
-                                name:"",
-                                points: null,
-                            },
-                            {
-                                name:"",
-                                points: null,
-                            },
-                        ]
-                    },
-                    {
-                        name:"",
-                        faction:"",
-                        cp:null,
-                        primaries:{
-                            objectives: [
-                                [0,0,0],
-                                [0,0,0],
-                                [0,0,0],
-                                [0,0,0],
-                            ],
-                            mission: null
-                        },
-                        secondaries: [
-                            {
-                                name:"",
-                                points: null,
-                            },
-                            {
-                                name:"",
-                                points: null,
-                            },
-                            {
-                                name:"",
-                                points: null,
-                            },
-                        ]
-                    },
-                ]
-            },
+            game:GAME_DATA,
             missions: missions,
             maps: [
             ]

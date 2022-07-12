@@ -9,7 +9,7 @@ module.exports = {
         {
             name:"",
             faction:"",
-            cp:null,
+            cp:0,
             primaries:{
                 objectives: [
                     [0,0,0],
@@ -22,22 +22,22 @@ module.exports = {
             secondaries: [
                 {
                     name:"",
-                    points: null,
+                    points: 0,
                 },
                 {
                     name:"",
-                    points: null,
+                    points: 0,
                 },
                 {
                     name:"",
-                    points: null,
+                    points: 0,
                 },
             ]
         },
         {
             name:"",
             faction:"",
-            cp:null,
+            cp:0,
             primaries:{
                 objectives: [
                     [0,0,0],
@@ -50,15 +50,15 @@ module.exports = {
             secondaries: [
                 {
                     name:"",
-                    points: null,
+                    points: 0,
                 },
                 {
                     name:"",
-                    points: null,
+                    points: 0,
                 },
                 {
                     name:"",
-                    points: null,
+                    points: 0,
                 },
             ]
         },

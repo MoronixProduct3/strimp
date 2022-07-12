@@ -24,10 +24,8 @@ class StrimpData {
                     return
                 this.data = msgString
                 console.log("data updated")
-                this.sockets.forEach(si => {
-                    if (si !== s)
-                        si.send(msgString)
-                })
+
+                this._propagate(s)
             })
 
             s.on('close', () => {
@@ -37,6 +35,13 @@ class StrimpData {
         })
 
         console.log(`Started strimp data transport on port ${port}`)
+    }
+    // Sending data to every open socket except the source of the update
+    _propagate(sourceSocket) {
+        this.sockets.forEach(socket => {
+            if (socket !== sourceSocket)
+                socket.send(this.data)
+        })
     }
 }
 module.exports = StrimpData;
